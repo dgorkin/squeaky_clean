@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --safe-area-top: env(safe-area-inset-top, 0px);
+    --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  body {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    overscroll-behavior-y: contain;
+  }
+
+  /* Theme: Lemon Fresh */
+  .theme-lemon {
+    --tw-bg-opacity: 1;
+    background-color: rgb(254 252 232 / var(--tw-bg-opacity));
+  }
+  .theme-lemon .bottom-nav {
+    background-color: rgb(254 249 195);
+    border-color: rgb(253 224 71);
+  }
+}
+
+@layer components {
+  .safe-top {
+    padding-top: var(--safe-area-top);
+  }
+  .safe-bottom {
+    padding-bottom: var(--safe-area-bottom);
+  }
+
+  .tap-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .task-complete-strike {
+    animation: strikethrough 0.3s ease-out forwards;
+  }
+
+  @keyframes strikethrough {
+    0% {
+      text-decoration-color: transparent;
+    }
+    100% {
+      text-decoration: line-through;
+      text-decoration-color: currentColor;
+      opacity: 0.5;
+    }
+  }
+
+  .sparkle-burst {
+    position: relative;
+  }
+  .sparkle-burst::after {
+    content: '✨';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: sparkle 0.6s ease-out forwards;
+    pointer-events: none;
+    font-size: 1.5rem;
+  }
+
+  .comic-sans-mode * {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive !important;
+  }
+}
