@@ -23,7 +23,8 @@ export default function AIHelper() {
     setSuggestions(null);
 
     try {
-      const res = await fetch('/api/generate-schedule', {
+      const apiBase = import.meta.env.VITE_API_URL || '';
+      const res = await fetch(`${apiBase}/api/generate-schedule`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: prompt.trim() }),
