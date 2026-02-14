@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <rect width="192" height="192" rx="38" fill="#10b981"/>
+  <g transform="translate(30, 25) scale(1.35)">
+    <rect x="20" y="45" width="60" height="40" rx="4" fill="white" opacity="0.95"/>
+    <polygon points="10,48 50,15 90,48" fill="white"/>
+    <rect x="40" y="60" width="20" height="25" rx="3" fill="#10b981"/>
+    <rect x="26" y="55" width="12" height="12" rx="2" fill="#10b981" opacity="0.5"/>
+    <rect x="62" y="55" width="12" height="12" rx="2" fill="#10b981" opacity="0.5"/>
+  </g>
+  <text x="155" y="45" font-size="28">✨</text>
+  <text x="15" y="60" font-size="22">✨</text>
+  <text x="145" y="165" font-size="20">✨</text>
+</svg>

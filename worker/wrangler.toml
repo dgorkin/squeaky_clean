@@ -1,0 +1,12 @@
+name = "squeaky-clean-worker"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+# KV namespace for rate limiting (create with: wrangler kv:namespace create RATE_LIMIT)
+# Uncomment after creating the namespace and add the binding ID:
+# [[kv_namespaces]]
+# binding = "RATE_LIMIT"
+# id = "your-kv-namespace-id-here"
+
+# To set the API key secret, run:
+# npx wrangler secret put ANTHROPIC_API_KEY
